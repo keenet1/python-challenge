@@ -72,5 +72,5 @@ with open(file_to_save, "w") as txt_file:
         f"Greatest Increase in Profits: {months[revenue_change.index(max(revenue_change))+1]} (${greatest_increase})" + "\n"
         f"Greatest Decrease in Profits: {months[revenue_change.index(min(revenue_change))+1]} (${greatest_decrease})" + "\n"
         "" + "\n")
-
+    
     txt_file.write(financial_analysis_results)
