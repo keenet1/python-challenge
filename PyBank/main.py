@@ -2,6 +2,8 @@
 import csv
 import os
 csvpath = os.path.join("PyBank", "Resources", "budget_data.csv")
+file_to_save = os.path.join("PyBank", "Analysis", "output_PyBank.txt")
+
 
 # Print Financial Anaysis Header
 print("")
@@ -59,14 +61,16 @@ with open(csvpath) as budget_data:
     print("")
 
 #Export a text file with the results
-file = open("output_PyBank.txt", "w")
-file.write("" + "\n")
-file.write("Financial Analysis" + "\n")
-file.write("------------------------------" + "\n")
-file.write(f"Total Months: {no_lines}" + "\n")
-file.write(f"Total: ${total}" + "\n")
-file.write(f"Average Change: ${rounded_revenue_average}" + "\n")
-file.write(f"Greatest Increase in Profits: {months[revenue_change.index(max(revenue_change))+1]} (${greatest_increase})" + "\n")
-file.write(f"Greatest Decrease in Profits: {months[revenue_change.index(min(revenue_change))+1]} (${greatest_decrease})" + "\n")
-file.write("" + "\n")
-file.close()
+with open(file_to_save, "w") as txt_file:
+    financial_analysis_results = (
+        "" + "\n"
+        "Financial Analysis" + "\n"
+        "------------------------------" + "\n"
+        f"Total Months: {no_lines}" + "\n"
+        f"Total: ${total}" + "\n"
+        f"Average Change: ${rounded_revenue_average}" + "\n"
+        f"Greatest Increase in Profits: {months[revenue_change.index(max(revenue_change))+1]} (${greatest_increase})" + "\n"
+        f"Greatest Decrease in Profits: {months[revenue_change.index(min(revenue_change))+1]} (${greatest_decrease})" + "\n"
+        "" + "\n")
+
+    txt_file.write(financial_analysis_results)
