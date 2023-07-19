@@ -1,7 +1,7 @@
 #import os mudule and module for reading CSV files
 import os
 import csv
-csvpath = os.path.join('Starter_Code-2', 'PyPoll', 'Resources', 'election_data.csv')
+csvpath = os.path.join("PyPoll", "Resources", "election_data.csv")
 
 #create lists and/or dictionaries for candidates, percentage of votes won, & total vote counts
 #declare variables to store
