@@ -1,7 +1,7 @@
 #import os mudule and module for reading CSV files
-import os
 import csv
-csvpath = os.path.join('python-challenge', 'PyBank', 'Resources', 'budget_data.csv')
+import os
+csvpath = os.path.join("python-challenge", "PyBank", "Resources", "budget_data.csv")
 
 
 # Print Financial Anaysis Header
