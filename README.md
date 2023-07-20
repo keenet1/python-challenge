@@ -22,7 +22,7 @@ The total number of votes each candidate won
 The winner of the election based on popular vote
 
 Acknowledgements:
-I wish to acknowledge and thank the following sources for advice and code help
+I wish to acknowledge and thank the following sources for advice and code help:
   PyBank Challenge:
     https://stackoverflow.com/questions/65151369/summing-a-column-in-a-csv-file-using-python
     https://github.com/fnusandhiya/python-challenge/blob/master/Pybank/main.py
