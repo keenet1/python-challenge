@@ -20,14 +20,9 @@ winning_count = 0
 winning_percentage = 0
 
 #print election results header
-with open(file_to_save, "w") as txt_file:
-    election_results_header = (
-        "" + "\n"
-        "Election Results" + "\n"
-        "------------------------------" + "\n")
-    print(election_results_header, end="")
-
-    txt_file.write(election_results_header)
+print("")
+print("Election Results")
+print("------------------------------")
 
 #calculate and report the total votes
 #special thanks to: https://github.com/antongit505/Election_Analysis/tree/main
@@ -79,3 +74,7 @@ with open(csvpath) as election_data:
     print((f"Winner: {winning_candidate}"))
     print("------------------------------")
     print("")
+
+#Export a text file with the results
+with open(file_to_save, "w") as txt_file:
+    Poll_results = ()
