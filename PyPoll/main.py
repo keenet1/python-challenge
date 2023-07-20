@@ -62,6 +62,8 @@ with open(csvpath) as election_data:
     for candidate_name in candidate_votes:
         votes = candidate_votes.get(candidate_name)
         vote_percentage = float(votes) / float(total_vote_count) * 100
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:.3F}% ({votes})\n" )
 
         if (votes > winning_count) and (vote_percentage > winning_percentage):
             winning_count = votes
@@ -77,4 +79,19 @@ with open(csvpath) as election_data:
 
 #Export a text file with the results
 with open(file_to_save, "w") as txt_file:
-    Poll_results = ()
+    Poll_results = (
+        "" + "\n"
+        "Election Results" + "\n"
+        "------------------------------" + "\n"
+        f"Total Votes: {no_lines}" + "\n"
+        "------------------------------" + "\n"
+        f"{candidate_name}: {vote_percentage:.3F}% ({votes})" + "\n"
+        "------------------------------" + "\n"
+        f"Winner: {winning_candidate}" + "\n"
+        "------------------------------" + "\n"
+        "" + "\n")
+    
+    txt_file.write(Poll_results)
+
+    
+    
